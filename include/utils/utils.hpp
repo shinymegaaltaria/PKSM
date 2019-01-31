@@ -36,6 +36,7 @@
 #include <memory>
 #include <citro2d.h>
 #include <optional>
+#include <vector>
 
 typedef uint8_t u8;
 typedef uint16_t u16;
@@ -413,6 +414,8 @@ namespace StringUtils
     std::string wrap(const std::string& str, float scaleX, float maxWidth, size_t lines);
 
     bool fontHasChar(const C2D_Font& font, u16 codepoint);
+    std::vector<std::string> fontSplit(const std::string& str);
+    C2D_Font fontForSplitString(const std::string& str);
 }
 
 #endif
